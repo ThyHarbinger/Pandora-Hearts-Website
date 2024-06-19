@@ -1,7 +1,30 @@
 html {
+    scroll-behavior: smooth;
     padding: 0px;
     margin: 0px;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+      background: white;
+      border-radius:20px;
+      -webkit-border-radius:20px;
+      -moz-border-radius:20px;
+      -ms-border-radius:20px;
+      -o-border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  
+    background: #555; 
+} 
 
 body {
     font-family: "Libre Baskerville", serif;
@@ -9,13 +32,17 @@ body {
     margin: 0px;
     scrollbar-width: none;
     overflow-x: hidden;
+    background-image: url(imgs/background2.jpg);
+    background-repeat: repeat-y;
+    background-size: contain;
 }
 
 header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 200px;
+    margin-bottom: 250px;
+    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .title {
@@ -71,6 +98,7 @@ article {
     margin-bottom: 200px;
     line-height: 30px;
     padding: 20px 100px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .characters {
@@ -120,4 +148,52 @@ article {
 .echo-pic {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
+}
+
+.leo-p:hover {
+    user-select: none;
+    background-image: linear-gradient(to bottom, 
+    red 20%,red 20%, 
+    green 20%,green 40%, 
+    blue 40%, blue 60%, orange 60%,
+    orange 80%, 
+    purple 80%);
+}
+
+.imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgs img{
+    width: calc(53% / 2);
+    height: fit-content;
+    margin: 1%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+}
+
+.imgs img:hover {
+    width: 35%;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+footer div {
+    color: #eee;
+    font-size: 10px;
 }
